@@ -18,8 +18,8 @@
     },
     "autoload": {
         "psr-4": {
-            "hiqdev\\recon\\": "src",
-            "hiqdev\\recon\\tests\\": "tests"
+            "hiqdev\\recon\\core\\": "src",
+            "hiqdev\\recon\\core\\tests\\": "tests"
         }
     },
     "extra": {
