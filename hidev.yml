@@ -1,0 +1,5 @@
+package:
+    type:       library
+    name:       hiqdev/recon
+    title:      Requests consumer that takes various messages and handles them
+    keywords:   php, rabbitmq, consumer

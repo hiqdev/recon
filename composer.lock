@@ -1,0 +1,2940 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "0c399b8fd6f411829b593c2dfae25904",
+    "packages": [
+        {
+            "name": "cebe/markdown",
+            "version": "1.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cebe/markdown.git",
+                "reference": "25b28bae8a6f185b5030673af77b32e1163d5c6e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cebe/markdown/zipball/25b28bae8a6f185b5030673af77b32e1163d5c6e",
+                "reference": "25b28bae8a6f185b5030673af77b32e1163d5c6e",
+                "shasum": ""
+            },
+            "require": {
+                "lib-pcre": "*",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "cebe/indent": "*",
+                "facebook/xhprof": "*@dev",
+                "phpunit/phpunit": "4.1.*"
+            },
+            "bin": [
+                "bin/markdown"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "cebe\\markdown\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Carsten Brandt",
+                    "email": "mail@cebe.cc",
+                    "homepage": "http://cebe.cc/",
+                    "role": "Creator"
+                }
+            ],
+            "description": "A super fast, highly extensible markdown parser for PHP",
+            "homepage": "https://github.com/cebe/markdown#readme",
+            "keywords": [
+                "extensible",
+                "fast",
+                "gfm",
+                "markdown",
+                "markdown-extra"
+            ],
+            "time": "2017-07-16T21:13:23+00:00"
+        },
+        {
+            "name": "guzzlehttp/psr7",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guzzle/psr7.git",
+                "reference": "a346647434953deb5bd599d92922b2d225e25170"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/a346647434953deb5bd599d92922b2d225e25170",
+                "reference": "a346647434953deb5bd599d92922b2d225e25170",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0",
+                "psr/http-message": "~1.0",
+                "ralouphie/getallheaders": "^2.0.5 || ^3.0.0"
+            },
+            "provide": {
+                "psr/http-message-implementation": "1.0"
+            },
+            "require-dev": {
+                "ext-zlib": "*",
+                "phpunit/phpunit": "~4.8.36 || ^5.7.27 || ^6.5.8"
+            },
+            "suggest": {
+                "zendframework/zend-httphandlerrunner": "Emit PSR-7 responses"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.5-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GuzzleHttp\\Psr7\\": "src/"
+                },
+                "files": [
+                    "src/functions_include.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
+                },
+                {
+                    "name": "Tobias Schultze",
+                    "homepage": "https://github.com/Tobion"
+                }
+            ],
+            "description": "PSR-7 message implementation that also provides common utility methods",
+            "keywords": [
+                "http",
+                "message",
+                "psr-7",
+                "request",
+                "response",
+                "stream",
+                "uri",
+                "url"
+            ],
+            "time": "2019-04-01T06:40:32+00:00"
+        },
+        {
+            "name": "hiqdev/composer-config-plugin",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hiqdev/composer-config-plugin.git",
+                "reference": "4f8d841d57a0015af48bf6451ad3342aa56b9559"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hiqdev/composer-config-plugin/zipball/4f8d841d57a0015af48bf6451ad3342aa56b9559",
+                "reference": "4f8d841d57a0015af48bf6451ad3342aa56b9559",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0",
+                "php": ">=7.0.0"
+            },
+            "require-dev": {
+                "composer/composer": "~1.0@dev"
+            },
+            "suggest": {
+                "symfony/yaml": "^2.0 || ^3.0 || ^4.0 for YAML files support",
+                "vlucas/phpdotenv": "^2.0 for `.env` files support"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "hiqdev\\composer\\config\\Plugin",
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "hiqdev\\composer\\config\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Andrii Vasyliev",
+                    "email": "sol@hiqdev.com",
+                    "homepage": "http://hipanel.com/",
+                    "role": "Project lead"
+                },
+                {
+                    "name": "Dmitry Naumenko",
+                    "email": "d.naumenko.a@gmail.com",
+                    "homepage": "http://silverfire.me/",
+                    "role": "Lead backend developer"
+                },
+                {
+                    "name": "Andrey Klochok",
+                    "email": "andreyklochok@gmail.com",
+                    "homepage": "http://hiqdev.com/",
+                    "role": "Lead frontend developer"
+                },
+                {
+                    "name": "Yuriy Myronchuk",
+                    "email": "bladeroot@gmail.com",
+                    "homepage": "http://hiqdev.com/",
+                    "role": "QA Lead"
+                }
+            ],
+            "description": "Composer plugin for config assembling",
+            "homepage": "https://github.com/hiqdev/composer-config-plugin",
+            "keywords": [
+                "assembling",
+                "composer",
+                "config",
+                "plugin"
+            ],
+            "time": "2019-04-23T18:54:31+00:00"
+        },
+        {
+            "name": "hiqdev/hiapi",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hiqdev/hiapi.git",
+                "reference": "c6f5522b71ae8bfe29f562cb3b682f1d0bcc62b0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hiqdev/hiapi/zipball/c6f5522b71ae8bfe29f562cb3b682f1d0bcc62b0",
+                "reference": "c6f5522b71ae8bfe29f562cb3b682f1d0bcc62b0",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/psr7": "^1.4",
+                "hiqdev/hidev-webapp": "dev-master",
+                "hiqdev/yii2-autobus": "dev-master",
+                "hiqdev/yii2-data-mapper": "dev-master",
+                "league/event": "^2.1",
+                "php-amqplib/php-amqplib": "^2.7.2",
+                "psr/container": "^1.0",
+                "vlucas/phpdotenv": "^2.4"
+            },
+            "require-dev": {
+                "hiqdev/hidev-hiqdev": "dev-master",
+                "hiqdev/hidev-php": "dev-master"
+            },
+            "suggest": {
+                "woohoolabs/yin": "To work with JsonAPI requests/responses"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "1.0": "1.0.x-dev"
+                },
+                "config-plugin": {
+                    "defines": "config/defines.php",
+                    "params": "config/params.php",
+                    "common": "config/common.php",
+                    "tests": "$common",
+                    "console": [
+                        "$common",
+                        "config/console.php"
+                    ],
+                    "web": [
+                        "$common",
+                        "config/web.php"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "hiapi\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Andrii Vasyliev",
+                    "email": "sol@hiqdev.com",
+                    "homepage": "http://hipanel.com/",
+                    "role": "Project lead"
+                },
+                {
+                    "name": "Dmitry Naumenko",
+                    "email": "d.naumenko.a@gmail.com",
+                    "homepage": "http://silverfire.me/",
+                    "role": "Lead backend developer"
+                },
+                {
+                    "name": "Andrey Klochok",
+                    "email": "andreyklochok@gmail.com",
+                    "homepage": "http://hiqdev.com/",
+                    "role": "Lead frontend developer"
+                },
+                {
+                    "name": "Yuriy Myronchuk",
+                    "email": "bladeroot@gmail.com",
+                    "homepage": "http://hiqdev.com/",
+                    "role": "QA Lead"
+                }
+            ],
+            "description": "HiAPI Yii2 base project for building API",
+            "homepage": "https://github.com/hiqdev/hiapi",
+            "keywords": [
+                "api",
+                "core",
+                "hiapi",
+                "yii2"
+            ],
+            "time": "2019-04-13T11:52:20+00:00"
+        },
+        {
+            "name": "hiqdev/hidev-nginx",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hiqdev/hidev-nginx.git",
+                "reference": "fe7a12ca427ecf3916255bd7ea41b34d3688da5b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hiqdev/hidev-nginx/zipball/fe7a12ca427ecf3916255bd7ea41b34d3688da5b",
+                "reference": "fe7a12ca427ecf3916255bd7ea41b34d3688da5b",
+                "shasum": ""
+            },
+            "require": {
+                "hiqdev/composer-config-plugin": "*@dev"
+            },
+            "require-dev": {
+                "hiqdev/hidev": "dev-master",
+                "hiqdev/hidev-hiqdev": "<2.0",
+                "hiqdev/hidev-php": "<2.0"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "config-plugin": {
+                    "hidev": "src/config/hidev.php",
+                    "tests": "src/config/tests.php"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "hidev\\nginx\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Andrii Vasyliev",
+                    "email": "sol@hiqdev.com",
+                    "homepage": "http://hipanel.com/",
+                    "role": "Project lead"
+                },
+                {
+                    "name": "Dmitry Naumenko",
+                    "email": "d.naumenko.a@gmail.com",
+                    "homepage": "http://silverfire.me/",
+                    "role": "Lead backend developer"
+                },
+                {
+                    "name": "Andrey Klochok",
+                    "email": "andreyklochok@gmail.com",
+                    "homepage": "http://hiqdev.com/",
+                    "role": "Lead frontend developer"
+                },
+                {
+                    "name": "Yuriy Myronchuk",
+                    "email": "bladeroot@gmail.com",
+                    "homepage": "http://hiqdev.com/",
+                    "role": "QA Lead"
+                }
+            ],
+            "description": "HiDev plugin for NGINX",
+            "homepage": "https://github.com/hiqdev/hidev-nginx",
+            "keywords": [
+                "hidev",
+                "nginx"
+            ],
+            "time": "2018-11-27T18:58:36+00:00"
+        },
+        {
+            "name": "hiqdev/hidev-webapp",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hiqdev/hidev-webapp.git",
+                "reference": "caa30d76ccc60f3b24104926643afd3dcace9a40"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hiqdev/hidev-webapp/zipball/caa30d76ccc60f3b24104926643afd3dcace9a40",
+                "reference": "caa30d76ccc60f3b24104926643afd3dcace9a40",
+                "shasum": ""
+            },
+            "require": {
+                "hiqdev/hidev-nginx": "<2.0 || dev-master"
+            },
+            "require-dev": {
+                "hiqdev/hidev": "dev-master",
+                "hiqdev/hidev-hiqdev": "<2.0",
+                "hiqdev/hidev-php": "<2.0"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "config-plugin": {
+                    "hidev": "src/config/hidev.php"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "hidev\\webapp\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Andrii Vasyliev",
+                    "email": "sol@hiqdev.com",
+                    "homepage": "http://hipanel.com/",
+                    "role": "Project lead"
+                },
+                {
+                    "name": "Dmitry Naumenko",
+                    "email": "d.naumenko.a@gmail.com",
+                    "homepage": "http://silverfire.me/",
+                    "role": "Lead backend developer"
+                },
+                {
+                    "name": "Andrey Klochok",
+                    "email": "andreyklochok@gmail.com",
+                    "homepage": "http://hiqdev.com/",
+                    "role": "Lead frontend developer"
+                },
+                {
+                    "name": "Yuriy Myronchuk",
+                    "email": "bladeroot@gmail.com",
+                    "homepage": "http://hiqdev.com/",
+                    "role": "QA Lead"
+                }
+            ],
+            "description": "HiDev plugin for Yii2 web applications",
+            "homepage": "https://github.com/hiqdev/hidev-webapp",
+            "keywords": [
+                "application",
+                "hidev",
+                "web"
+            ],
+            "time": "2019-03-13T15:57:01+00:00"
+        },
+        {
+            "name": "hiqdev/yii-compat",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hiqdev/yii-compat.git",
+                "reference": "9d4210821e479756eee6b0c3f315f4ef683a7377"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hiqdev/yii-compat/zipball/9d4210821e479756eee6b0c3f315f4ef683a7377",
+                "reference": "9d4210821e479756eee6b0c3f315f4ef683a7377",
+                "shasum": ""
+            },
+            "require-dev": {
+                "hiqdev/hidev": "dev-master",
+                "hiqdev/hidev-hiqdev": "dev-master",
+                "hiqdev/hidev-php": "dev-master"
+            },
+            "type": "project",
+            "autoload": {
+                "psr-4": {
+                    "hiqdev\\yii\\compat\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Andrii Vasyliev",
+                    "email": "sol@hiqdev.com",
+                    "homepage": "http://hipanel.com/",
+                    "role": "Project lead"
+                },
+                {
+                    "name": "Dmitry Naumenko",
+                    "email": "d.naumenko.a@gmail.com",
+                    "homepage": "http://silverfire.me/",
+                    "role": "Lead backend developer"
+                },
+                {
+                    "name": "Andrey Klochok",
+                    "email": "andreyklochok@gmail.com",
+                    "homepage": "http://hiqdev.com/",
+                    "role": "Lead frontend developer"
+                },
+                {
+                    "name": "Yuriy Myronchuk",
+                    "email": "bladeroot@gmail.com",
+                    "homepage": "http://hiqdev.com/",
+                    "role": "QA Lead"
+                }
+            ],
+            "description": "Yii 2/3 compatibility crutch",
+            "homepage": "https://github.com/hiqdev/yii-compat",
+            "keywords": [
+                "compat",
+                "yii"
+            ],
+            "time": "2019-03-19T12:45:35+00:00"
+        },
+        {
+            "name": "hiqdev/yii2-autobus",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hiqdev/yii2-autobus.git",
+                "reference": "f3952d632a3d612a4f3e8c7ef588139306652c65"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hiqdev/yii2-autobus/zipball/f3952d632a3d612a4f3e8c7ef588139306652c65",
+                "reference": "f3952d632a3d612a4f3e8c7ef588139306652c65",
+                "shasum": ""
+            },
+            "require": {
+                "league/tactician": "^1.0"
+            },
+            "require-dev": {
+                "hiqdev/hidev-hiqdev": "dev-master",
+                "hiqdev/hidev-php": "dev-master"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "1.0": "1.0.x-dev"
+                },
+                "config-plugin": {
+                    "params": "config/params.php",
+                    "common": "config/common.php"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "hiqdev\\yii2\\autobus\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Andrii Vasyliev",
+                    "email": "sol@hiqdev.com",
+                    "homepage": "http://hipanel.com/",
+                    "role": "Project lead"
+                },
+                {
+                    "name": "Dmitry Naumenko",
+                    "email": "d.naumenko.a@gmail.com",
+                    "homepage": "http://silverfire.me/",
+                    "role": "Lead backend developer"
+                },
+                {
+                    "name": "Andrey Klochok",
+                    "email": "andreyklochok@gmail.com",
+                    "homepage": "http://hiqdev.com/",
+                    "role": "Lead frontend developer"
+                },
+                {
+                    "name": "Yuriy Myronchuk",
+                    "email": "bladeroot@gmail.com",
+                    "homepage": "http://hiqdev.com/",
+                    "role": "QA Lead"
+                }
+            ],
+            "description": "Simple automated command bus",
+            "homepage": "https://github.com/hiqdev/yii2-autobus",
+            "keywords": [
+                "autobus",
+                "yii2"
+            ],
+            "time": "2019-04-13T10:00:09+00:00"
+        },
+        {
+            "name": "hiqdev/yii2-data-mapper",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hiqdev/yii2-data-mapper.git",
+                "reference": "2e39de404b010b2beb527b913ddf3149422ed738"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hiqdev/yii2-data-mapper/zipball/2e39de404b010b2beb527b913ddf3149422ed738",
+                "reference": "2e39de404b010b2beb527b913ddf3149422ed738",
+                "shasum": ""
+            },
+            "require": {
+                "ocramius/generated-hydrator": "^2.2@dev"
+            },
+            "require-dev": {
+                "hiqdev/hidev-hiqdev": "dev-master",
+                "hiqdev/hidev-php": "dev-master"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "1.0": "1.0.x-dev"
+                },
+                "config-plugin": {
+                    "params": "config/params.php",
+                    "common": "config/common.php",
+                    "tests": "config/common.php"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "hiqdev\\yii\\DataMapper\\": "src",
+                    "hiqdev\\yii\\DataMapper\\tests\\": "tests"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Andrii Vasyliev",
+                    "email": "sol@hiqdev.com",
+                    "homepage": "http://hipanel.com/",
+                    "role": "Project lead"
+                },
+                {
+                    "name": "Dmitry Naumenko",
+                    "email": "d.naumenko.a@gmail.com",
+                    "homepage": "http://silverfire.me/",
+                    "role": "Lead backend developer"
+                },
+                {
+                    "name": "Andrey Klochok",
+                    "email": "andreyklochok@gmail.com",
+                    "homepage": "http://hiqdev.com/",
+                    "role": "Lead frontend developer"
+                },
+                {
+                    "name": "Yuriy Myronchuk",
+                    "email": "bladeroot@gmail.com",
+                    "homepage": "http://hiqdev.com/",
+                    "role": "QA Lead"
+                }
+            ],
+            "description": "Data Mapper for Yii2",
+            "homepage": "https://github.com/hiqdev/yii2-data-mapper",
+            "keywords": [
+                "data mapper",
+                "database",
+                "orm",
+                "yii2"
+            ],
+            "time": "2019-04-15T16:30:13+00:00"
+        },
+        {
+            "name": "league/event",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/event.git",
+                "reference": "d2cc124cf9a3fab2bb4ff963307f60361ce4d119"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/event/zipball/d2cc124cf9a3fab2bb4ff963307f60361ce4d119",
+                "reference": "d2cc124cf9a3fab2bb4ff963307f60361ce4d119",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "henrikbjorn/phpspec-code-coverage": "~1.0.1",
+                "phpspec/phpspec": "^2.2"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "League\\Event\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Frank de Jonge",
+                    "email": "info@frenky.net"
+                }
+            ],
+            "description": "Event package",
+            "keywords": [
+                "emitter",
+                "event",
+                "listener"
+            ],
+            "time": "2018-11-26T11:52:41+00:00"
+        },
+        {
+            "name": "league/tactician",
+            "version": "v1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/tactician.git",
+                "reference": "d0339e22fd9252fb0fa53102b488d2c514483b8a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/tactician/zipball/d0339e22fd9252fb0fa53102b488d2c514483b8a",
+                "reference": "d0339e22fd9252fb0fa53102b488d2c514483b8a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5"
+            },
+            "require-dev": {
+                "mockery/mockery": "~0.9",
+                "phpunit/phpunit": "^4.8.35",
+                "squizlabs/php_codesniffer": "~2.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "League\\Tactician\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ross Tuck",
+                    "homepage": "http://tactician.thephpleague.com"
+                }
+            ],
+            "description": "A small, flexible command bus. Handy for building service layers.",
+            "keywords": [
+                "command",
+                "command bus",
+                "service layer"
+            ],
+            "time": "2017-11-30T09:17:20+00:00"
+        },
+        {
+            "name": "nikic/php-parser",
+            "version": "3.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nikic/PHP-Parser.git",
+                "reference": "bb87e28e7d7b8d9a7fda231d37457c9210faf6ce"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/bb87e28e7d7b8d9a7fda231d37457c9210faf6ce",
+                "reference": "bb87e28e7d7b8d9a7fda231d37457c9210faf6ce",
+                "shasum": ""
+            },
+            "require": {
+                "ext-tokenizer": "*",
+                "php": ">=5.5"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0|~5.0"
+            },
+            "bin": [
+                "bin/php-parse"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "PhpParser\\": "lib/PhpParser"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Nikita Popov"
+                }
+            ],
+            "description": "A PHP parser written in PHP",
+            "keywords": [
+                "parser",
+                "php"
+            ],
+            "time": "2018-02-28T20:30:58+00:00"
+        },
+        {
+            "name": "ocramius/code-generator-utils",
+            "version": "0.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Ocramius/CodeGenerationUtils.git",
+                "reference": "862c03de42475fe039e7d0f47966c25ac40a58a8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Ocramius/CodeGenerationUtils/zipball/862c03de42475fe039e7d0f47966c25ac40a58a8",
+                "reference": "862c03de42475fe039e7d0f47966c25ac40a58a8",
+                "shasum": ""
+            },
+            "require": {
+                "nikic/php-parser": "~2.0|~3.0",
+                "php": "~7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~5.0",
+                "squizlabs/php_codesniffer": "~2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "CodeGenerationUtils\\": "src/CodeGenerationUtils"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marco Pivetta",
+                    "email": "ocramius@gmail.com",
+                    "homepage": "http://ocramius.github.com/"
+                }
+            ],
+            "description": "A set of code generator utilities built on top of PHP-Parsers that ease its use when combined with Reflection",
+            "homepage": "https://github.com/Ocramius/CodeGenerationUtils",
+            "keywords": [
+                "code generation",
+                "compiler",
+                "parser",
+                "php code",
+                "reflection"
+            ],
+            "time": "2017-06-22T02:37:15+00:00"
+        },
+        {
+            "name": "ocramius/generated-hydrator",
+            "version": "2.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Ocramius/GeneratedHydrator.git",
+                "reference": "9b6b62db9959bec8fec88111e081e9456e36179f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Ocramius/GeneratedHydrator/zipball/9b6b62db9959bec8fec88111e081e9456e36179f",
+                "reference": "9b6b62db9959bec8fec88111e081e9456e36179f",
+                "shasum": ""
+            },
+            "require": {
+                "nikic/php-parser": "~2.0|~3.0",
+                "ocramius/code-generator-utils": "~0.4",
+                "php": "~7.0",
+                "zendframework/zend-hydrator": "^2.0"
+            },
+            "require-dev": {
+                "phpbench/phpbench": "^0.13.0",
+                "phpunit/phpunit": "^6.4",
+                "squizlabs/php_codesniffer": "^3.0",
+                "zendframework/zend-filter": "^2.7",
+                "zendframework/zend-servicemanager": "^3.2",
+                "zendframework/zend-stdlib": "^3.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "GeneratedHydrator\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marco Pivetta",
+                    "email": "ocramius@gmail.com",
+                    "homepage": "http://ocramius.github.com/"
+                }
+            ],
+            "description": "An Object Hydrator that allows very fast array to object to array conversion",
+            "homepage": "https://github.com/Ocramius/GeneratedHydrator",
+            "keywords": [
+                "array conversion",
+                "hydrator",
+                "object conversion",
+                "performance",
+                "serializer"
+            ],
+            "time": "2017-11-28T20:58:11+00:00"
+        },
+        {
+            "name": "php-amqplib/php-amqplib",
+            "version": "v2.9.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-amqplib/php-amqplib.git",
+                "reference": "76faddcd668dabb8d4f7c00e86b8a9decd781a59"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-amqplib/php-amqplib/zipball/76faddcd668dabb8d4f7c00e86b8a9decd781a59",
+                "reference": "76faddcd668dabb8d4f7c00e86b8a9decd781a59",
+                "shasum": ""
+            },
+            "require": {
+                "ext-bcmath": "*",
+                "ext-sockets": "*",
+                "php": ">=5.4.0"
+            },
+            "replace": {
+                "videlalvaro/php-amqplib": "self.version"
+            },
+            "require-dev": {
+                "ext-curl": "*",
+                "nategood/httpful": "^0.2.20",
+                "phpdocumentor/phpdocumentor": "^2.9",
+                "phpunit/phpunit": "^4.8",
+                "squizlabs/php_codesniffer": "^2.5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.8-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "PhpAmqpLib\\": "PhpAmqpLib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-2.1-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Alvaro Videla",
+                    "role": "Original Maintainer"
+                },
+                {
+                    "name": "John Kelly",
+                    "email": "johnmkelly86@gmail.com",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Raúl Araya",
+                    "email": "nubeiro@gmail.com",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Luke Bakken",
+                    "email": "luke@bakken.io",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Formerly videlalvaro/php-amqplib.  This library is a pure PHP implementation of the AMQP protocol. It's been tested against RabbitMQ.",
+            "homepage": "https://github.com/php-amqplib/php-amqplib/",
+            "keywords": [
+                "message",
+                "queue",
+                "rabbitmq"
+            ],
+            "time": "2019-04-24T15:36:21+00:00"
+        },
+        {
+            "name": "psr/container",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/container.git",
+                "reference": "014d250daebff39eba15ba990eeb2a140798e77c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/container/zipball/014d250daebff39eba15ba990eeb2a140798e77c",
+                "reference": "014d250daebff39eba15ba990eeb2a140798e77c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Container\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common Container Interface (PHP FIG PSR-11)",
+            "homepage": "https://github.com/php-fig/container",
+            "keywords": [
+                "PSR-11",
+                "container",
+                "container-interface",
+                "container-interop",
+                "psr"
+            ],
+            "time": "2018-12-29T15:36:03+00:00"
+        },
+        {
+            "name": "psr/http-message",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/http-message.git",
+                "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/http-message/zipball/f6561bf28d520154e4b0ec72be95418abe6d9363",
+                "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Http\\Message\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for HTTP messages",
+            "homepage": "https://github.com/php-fig/http-message",
+            "keywords": [
+                "http",
+                "http-message",
+                "psr",
+                "psr-7",
+                "request",
+                "response"
+            ],
+            "time": "2016-08-06T14:39:51+00:00"
+        },
+        {
+            "name": "psr/log",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/log.git",
+                "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
+                "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Log\\": "Psr/Log/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for logging libraries",
+            "homepage": "https://github.com/php-fig/log",
+            "keywords": [
+                "log",
+                "psr",
+                "psr-3"
+            ],
+            "time": "2016-10-10T12:19:37+00:00"
+        },
+        {
+            "name": "psr/simple-cache",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/simple-cache.git",
+                "reference": "408d5eafb83c57f6365a3ca330ff23aa4a5fa39b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/simple-cache/zipball/408d5eafb83c57f6365a3ca330ff23aa4a5fa39b",
+                "reference": "408d5eafb83c57f6365a3ca330ff23aa4a5fa39b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\SimpleCache\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interfaces for simple caching",
+            "keywords": [
+                "cache",
+                "caching",
+                "psr",
+                "psr-16",
+                "simple-cache"
+            ],
+            "time": "2017-10-23T01:57:42+00:00"
+        },
+        {
+            "name": "ralouphie/getallheaders",
+            "version": "3.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ralouphie/getallheaders.git",
+                "reference": "120b605dfeb996808c31b6477290a714d356e822"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ralouphie/getallheaders/zipball/120b605dfeb996808c31b6477290a714d356e822",
+                "reference": "120b605dfeb996808c31b6477290a714d356e822",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "php-coveralls/php-coveralls": "^2.1",
+                "phpunit/phpunit": "^5 || ^6.5"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/getallheaders.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ralph Khattar",
+                    "email": "ralph.khattar@gmail.com"
+                }
+            ],
+            "description": "A polyfill for getallheaders.",
+            "time": "2019-03-08T08:55:37+00:00"
+        },
+        {
+            "name": "symfony/polyfill-ctype",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-ctype.git",
+                "reference": "82ebae02209c21113908c229e9883c419720738a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/82ebae02209c21113908c229e9883c419720738a",
+                "reference": "82ebae02209c21113908c229e9883c419720738a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "suggest": {
+                "ext-ctype": "For best performance"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.11-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Ctype\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                },
+                {
+                    "name": "Gert de Pagter",
+                    "email": "BackEndTea@gmail.com"
+                }
+            ],
+            "description": "Symfony polyfill for ctype functions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "ctype",
+                "polyfill",
+                "portable"
+            ],
+            "time": "2019-02-06T07:57:58+00:00"
+        },
+        {
+            "name": "vlucas/phpdotenv",
+            "version": "2.6.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/vlucas/phpdotenv.git",
+                "reference": "2a7dcf7e3e02dc5e701004e51a6f304b713107d5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/2a7dcf7e3e02dc5e701004e51a6f304b713107d5",
+                "reference": "2a7dcf7e3e02dc5e701004e51a6f304b713107d5",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.9",
+                "symfony/polyfill-ctype": "^1.9"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8.35 || ^5.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.6-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Dotenv\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Vance Lucas",
+                    "email": "vance@vancelucas.com",
+                    "homepage": "http://www.vancelucas.com"
+                }
+            ],
+            "description": "Loads environment variables from `.env` to `getenv()`, `$_ENV` and `$_SERVER` automagically.",
+            "keywords": [
+                "dotenv",
+                "env",
+                "environment"
+            ],
+            "time": "2019-01-29T11:11:52+00:00"
+        },
+        {
+            "name": "yiisoft/yii2",
+            "version": "3.0.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yiisoft/yii2-framework.git",
+                "reference": "9f215f3c995892a6c94b61c53366a77b10564ae3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/9f215f3c995892a6c94b61c53366a77b10564ae3",
+                "reference": "9f215f3c995892a6c94b61c53366a77b10564ae3",
+                "shasum": ""
+            },
+            "require": {
+                "cebe/markdown": "~1.0.0 | ~1.1.0",
+                "ext-ctype": "*",
+                "ext-mbstring": "*",
+                "lib-pcre": "*",
+                "php": ">=7.1.0",
+                "psr/http-message": "~1.0.0",
+                "psr/log": "~1.0.2",
+                "psr/simple-cache": "~1.0.0",
+                "yiisoft/yii2-composer": "~2.0.4"
+            },
+            "suggest": {
+                "ezyang/htmlpurifier": "version '~4.6' required at 'yii\\helpers\\HtmlPurifier' for 'html' data format support (e.g. 'yii\\i18n\\Formatter:asHtml()' and 'yii\\helpers\\StringHelper::truncateHtml()')"
+            },
+            "bin": [
+                "yii"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "yii\\": ""
+                },
+                "classmap": [
+                    "Yii.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Qiang Xue",
+                    "email": "qiang.xue@gmail.com",
+                    "homepage": "http://www.yiiframework.com/",
+                    "role": "Founder and project lead"
+                },
+                {
+                    "name": "Alexander Makarov",
+                    "email": "sam@rmcreative.ru",
+                    "homepage": "http://rmcreative.ru/",
+                    "role": "Core framework development"
+                },
+                {
+                    "name": "Maurizio Domba",
+                    "homepage": "http://mdomba.info/",
+                    "role": "Core framework development"
+                },
+                {
+                    "name": "Carsten Brandt",
+                    "email": "mail@cebe.cc",
+                    "homepage": "http://cebe.cc/",
+                    "role": "Core framework development"
+                },
+                {
+                    "name": "Timur Ruziev",
+                    "email": "resurtm@gmail.com",
+                    "homepage": "http://resurtm.com/",
+                    "role": "Core framework development"
+                },
+                {
+                    "name": "Paul Klimov",
+                    "email": "klimov.paul@gmail.com",
+                    "role": "Core framework development"
+                },
+                {
+                    "name": "Dmitry Naumenko",
+                    "email": "d.naumenko.a@gmail.com",
+                    "role": "Core framework development"
+                },
+                {
+                    "name": "Boudewijn Vahrmeijer",
+                    "email": "info@dynasource.eu",
+                    "homepage": "http://dynasource.eu",
+                    "role": "Core framework development"
+                }
+            ],
+            "description": "Yii PHP Framework Version 2",
+            "homepage": "http://www.yiiframework.com/",
+            "keywords": [
+                "framework",
+                "yii2"
+            ],
+            "time": "2018-06-22T18:19:21+00:00"
+        },
+        {
+            "name": "yiisoft/yii2-composer",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yiisoft/yii2-composer.git",
+                "reference": "2caf2e7c6127085315d43d5034326f7bdf83b6a6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yiisoft/yii2-composer/zipball/2caf2e7c6127085315d43d5034326f7bdf83b6a6",
+                "reference": "2caf2e7c6127085315d43d5034326f7bdf83b6a6",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0"
+            },
+            "require-dev": {
+                "composer/composer": "^1.0",
+                "phpunit/phpunit": "<7"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "yii\\composer\\Plugin",
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "yii\\composer\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Qiang Xue",
+                    "email": "qiang.xue@gmail.com"
+                },
+                {
+                    "name": "Carsten Brandt",
+                    "email": "mail@cebe.cc"
+                }
+            ],
+            "description": "The composer plugin for Yii extension installer",
+            "keywords": [
+                "composer",
+                "extension installer",
+                "yii2"
+            ],
+            "time": "2019-02-18T10:24:42+00:00"
+        },
+        {
+            "name": "zendframework/zend-hydrator",
+            "version": "dev-release-2.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/zend-hydrator.git",
+                "reference": "9c48e077e1d0defc413b1c91724d7083c475e061"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/zend-hydrator/zipball/9c48e077e1d0defc413b1c91724d7083c475e061",
+                "reference": "9c48e077e1d0defc413b1c91724d7083c475e061",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.6 || ^7.0",
+                "zendframework/zend-stdlib": "^3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7.27 || ^6.5.8 || ^7.1.2",
+                "zendframework/zend-coding-standard": "~1.0.0",
+                "zendframework/zend-eventmanager": "^2.6.2 || ^3.0",
+                "zendframework/zend-filter": "^2.6",
+                "zendframework/zend-inputfilter": "^2.6",
+                "zendframework/zend-serializer": "^2.6.1",
+                "zendframework/zend-servicemanager": "^2.7.5 || ^3.0.3"
+            },
+            "suggest": {
+                "zendframework/zend-eventmanager": "^2.6.2 || ^3.0, to support aggregate hydrator usage",
+                "zendframework/zend-filter": "^2.6, to support naming strategy hydrator usage",
+                "zendframework/zend-serializer": "^2.6.1, to use the SerializableStrategy",
+                "zendframework/zend-servicemanager": "^2.7.5 || ^3.0.3, to support hydrator plugin manager usage"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-release-2.4": "2.4.x-dev"
+                },
+                "zf": {
+                    "component": "Zend\\Hydrator",
+                    "config-provider": "Zend\\Hydrator\\ConfigProvider"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Zend\\Hydrator\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "Serialize objects to arrays, and vice versa",
+            "keywords": [
+                "ZendFramework",
+                "hydrator",
+                "zf"
+            ],
+            "time": "2018-12-10T17:47:11+00:00"
+        },
+        {
+            "name": "zendframework/zend-stdlib",
+            "version": "dev-develop",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/zend-stdlib.git",
+                "reference": "519a966dedc32af62765736eba9900c270e419d8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/zend-stdlib/zipball/519a966dedc32af62765736eba9900c270e419d8",
+                "reference": "519a966dedc32af62765736eba9900c270e419d8",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.6 || ^7.0"
+            },
+            "require-dev": {
+                "phpbench/phpbench": "^0.13",
+                "phpunit/phpunit": "^5.7.27 || ^6.5.8 || ^7.1.2",
+                "zendframework/zend-coding-standard": "~1.0.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.2.x-dev",
+                    "dev-develop": "3.3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Zend\\Stdlib\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "SPL extensions, array utilities, error handlers, and more",
+            "keywords": [
+                "ZendFramework",
+                "stdlib",
+                "zf"
+            ],
+            "time": "2019-02-07T05:36:36+00:00"
+        }
+    ],
+    "packages-dev": [
+        {
+            "name": "hiqdev/hidev",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hiqdev/hidev.git",
+                "reference": "f9afe2781b79e25706f6a68e381d6ec3cb49ca07"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hiqdev/hidev/zipball/f9afe2781b79e25706f6a68e381d6ec3cb49ca07",
+                "reference": "f9afe2781b79e25706f6a68e381d6ec3cb49ca07",
+                "shasum": ""
+            },
+            "require": {
+                "hiqdev/yii2-collection": "*",
+                "symfony/yaml": "^3.0 || ^2.0",
+                "yiisoft/yii2": "^2.0 || ^3.0",
+                "yiisoft/yii2-twig": "^2.0"
+            },
+            "require-dev": {
+                "hiqdev/composer-config-plugin": "dev-master",
+                "yiisoft/yii2": "dev-master"
+            },
+            "bin": [
+                "bin/hidev"
+            ],
+            "type": "project",
+            "extra": {
+                "config-plugin": {
+                    "hidev": "src/config/hidev.php",
+                    "tests": "src/config/tests.php"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "hidev\\": "src",
+                    "hidev\\tests\\": "tests"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Andrii Vasyliev",
+                    "email": "sol@hiqdev.com",
+                    "homepage": "http://hipanel.com/",
+                    "role": "Project lead"
+                },
+                {
+                    "name": "Dmitry Naumenko",
+                    "email": "d.naumenko.a@gmail.com",
+                    "homepage": "http://silverfire.me/",
+                    "role": "Lead backend developer"
+                },
+                {
+                    "name": "Andrey Klochok",
+                    "email": "andreyklochok@gmail.com",
+                    "homepage": "http://hiqdev.com/",
+                    "role": "Lead frontend developer"
+                },
+                {
+                    "name": "Yuriy Myronchuk",
+                    "email": "bladeroot@gmail.com",
+                    "homepage": "http://hiqdev.com/",
+                    "role": "QA Lead"
+                }
+            ],
+            "description": "Automation tool mixed with code generator for easier continuous development",
+            "homepage": "https://github.com/hiqdev/hidev",
+            "keywords": [
+                "automation",
+                "build tool",
+                "code generator",
+                "continuous development",
+                "continuous integration",
+                "task runner"
+            ],
+            "time": "2019-03-23T20:07:10+00:00"
+        },
+        {
+            "name": "hiqdev/hidev-chkipper",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hiqdev/hidev-chkipper.git",
+                "reference": "2259678bb7a0fa6856ab1b7bd5796706943c0bc2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hiqdev/hidev-chkipper/zipball/2259678bb7a0fa6856ab1b7bd5796706943c0bc2",
+                "reference": "2259678bb7a0fa6856ab1b7bd5796706943c0bc2",
+                "shasum": ""
+            },
+            "require": {
+                "hiqdev/composer-config-plugin": "*@dev"
+            },
+            "require-dev": {
+                "hiqdev/hidev": "dev-master",
+                "hiqdev/hidev-composer": "dev-master",
+                "hiqdev/hidev-hiqdev": "dev-master",
+                "hiqdev/hidev-license": "dev-master",
+                "hiqdev/hidev-php": "dev-master",
+                "hiqdev/hidev-php-cs-fixer": "dev-master",
+                "hiqdev/hidev-phpunit": "dev-master",
+                "hiqdev/hidev-readme": "dev-master",
+                "hiqdev/hidev-scrutinizer": "dev-master",
+                "hiqdev/hidev-travis": "dev-master"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "1.0": "1.0.x-dev"
+                },
+                "config-plugin": {
+                    "hidev": "src/config/hidev.php"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "hiqdev\\hidev\\chkipper\\": "src",
+                    "hidev\\chkipper\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Andrii Vasyliev",
+                    "email": "sol@hiqdev.com",
+                    "homepage": "http://hipanel.com/",
+                    "role": "Project lead"
+                },
+                {
+                    "name": "Dmitry Naumenko",
+                    "email": "d.naumenko.a@gmail.com",
+                    "homepage": "http://silverfire.me/",
+                    "role": "Lead backend developer"
+                },
+                {
+                    "name": "Andrey Klochok",
+                    "email": "andreyklochok@gmail.com",
+                    "homepage": "http://hiqdev.com/",
+                    "role": "Lead frontend developer"
+                },
+                {
+                    "name": "Yuriy Myronchuk",
+                    "email": "bladeroot@gmail.com",
+                    "homepage": "http://hiqdev.com/",
+                    "role": "QA Lead"
+                }
+            ],
+            "description": "HiDev plugin for Chkipper",
+            "homepage": "https://github.com/hiqdev/hidev-chkipper",
+            "keywords": [
+                "chkipper",
+                "hidev",
+                "plugin"
+            ],
+            "time": "2018-12-12T19:50:14+00:00"
+        },
+        {
+            "name": "hiqdev/hidev-composer",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hiqdev/hidev-composer.git",
+                "reference": "b7b27bf0e0225f9522f38e37775b3d6d4c7816c0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hiqdev/hidev-composer/zipball/b7b27bf0e0225f9522f38e37775b3d6d4c7816c0",
+                "reference": "b7b27bf0e0225f9522f38e37775b3d6d4c7816c0",
+                "shasum": ""
+            },
+            "require": {
+                "hiqdev/composer-config-plugin": "*@dev"
+            },
+            "require-dev": {
+                "hiqdev/hidev": "dev-master",
+                "hiqdev/hidev-hiqdev": "dev-master",
+                "hiqdev/hidev-license": "dev-master",
+                "hiqdev/hidev-php": "dev-master",
+                "hiqdev/hidev-php-cs-fixer": "dev-master",
+                "hiqdev/hidev-phpunit": "dev-master",
+                "hiqdev/hidev-readme": "dev-master",
+                "hiqdev/hidev-scrutinizer": "dev-master",
+                "hiqdev/hidev-travis": "dev-master"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "1.0": "1.0.x-dev"
+                },
+                "config-plugin": {
+                    "hidev": "src/config/hidev.php"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "hidev\\composer\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Andrii Vasyliev",
+                    "email": "sol@hiqdev.com",
+                    "homepage": "http://hipanel.com/",
+                    "role": "Project lead"
+                },
+                {
+                    "name": "Dmitry Naumenko",
+                    "email": "d.naumenko.a@gmail.com",
+                    "homepage": "http://silverfire.me/",
+                    "role": "Lead backend developer"
+                },
+                {
+                    "name": "Andrey Klochok",
+                    "email": "andreyklochok@gmail.com",
+                    "homepage": "http://hiqdev.com/",
+                    "role": "Lead frontend developer"
+                },
+                {
+                    "name": "Yuriy Myronchuk",
+                    "email": "bladeroot@gmail.com",
+                    "homepage": "http://hiqdev.com/",
+                    "role": "QA Lead"
+                }
+            ],
+            "description": "HiDev plugin for Composer",
+            "homepage": "https://github.com/hiqdev/hidev-composer",
+            "keywords": [
+                "composer",
+                "hidev",
+                "packagist",
+                "plugin"
+            ],
+            "time": "2018-12-08T16:16:33+00:00"
+        },
+        {
+            "name": "hiqdev/hidev-hiqdev",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hiqdev/hidev-hiqdev.git",
+                "reference": "cd62c8705ad0d9ff6655c24eb28781545342d190"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hiqdev/hidev-hiqdev/zipball/cd62c8705ad0d9ff6655c24eb28781545342d190",
+                "reference": "cd62c8705ad0d9ff6655c24eb28781545342d190",
+                "shasum": ""
+            },
+            "require": {
+                "hiqdev/composer-config-plugin": "*@dev",
+                "hiqdev/hidev-php-cs-fixer": "*@dev",
+                "hiqdev/hidev-readme": "*@dev"
+            },
+            "require-dev": {
+                "hiqdev/hidev": "dev-master",
+                "hiqdev/hidev-composer": "dev-master",
+                "hiqdev/hidev-license": "dev-master",
+                "hiqdev/hidev-php": "dev-master",
+                "hiqdev/hidev-phpunit": "dev-master",
+                "hiqdev/hidev-scrutinizer": "dev-master",
+                "hiqdev/hidev-travis": "dev-master"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "1.0": "1.0.x-dev"
+                },
+                "config-plugin": {
+                    "hidev": "src/config/hidev.php"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "hidev\\hiqdev\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Andrii Vasyliev",
+                    "email": "sol@hiqdev.com",
+                    "homepage": "http://hipanel.com/",
+                    "role": "Project lead"
+                },
+                {
+                    "name": "Dmitry Naumenko",
+                    "email": "d.naumenko.a@gmail.com",
+                    "homepage": "http://silverfire.me/",
+                    "role": "Lead backend developer"
+                },
+                {
+                    "name": "Andrey Klochok",
+                    "email": "andreyklochok@gmail.com",
+                    "homepage": "http://hiqdev.com/",
+                    "role": "Lead frontend developer"
+                },
+                {
+                    "name": "Yuriy Myronchuk",
+                    "email": "bladeroot@gmail.com",
+                    "homepage": "http://hiqdev.com/",
+                    "role": "QA Lead"
+                }
+            ],
+            "description": "HiDev plugin for HiQDev vendor configuration",
+            "homepage": "https://github.com/hiqdev/hidev-hiqdev",
+            "keywords": [
+                "config",
+                "hidev",
+                "hiqdev",
+                "vendor"
+            ],
+            "time": "2019-04-17T09:41:29+00:00"
+        },
+        {
+            "name": "hiqdev/hidev-license",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hiqdev/hidev-license.git",
+                "reference": "99069ad17eb6d82a500ec2c2ecf1533a957c6a41"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hiqdev/hidev-license/zipball/99069ad17eb6d82a500ec2c2ecf1533a957c6a41",
+                "reference": "99069ad17eb6d82a500ec2c2ecf1533a957c6a41",
+                "shasum": ""
+            },
+            "require": {
+                "hiqdev/composer-config-plugin": "*@dev"
+            },
+            "require-dev": {
+                "hiqdev/hidev": "dev-master",
+                "hiqdev/hidev-chkipper": "dev-master",
+                "hiqdev/hidev-composer": "dev-master",
+                "hiqdev/hidev-hiqdev": "dev-master",
+                "hiqdev/hidev-php": "dev-master",
+                "hiqdev/hidev-php-cs-fixer": "dev-master",
+                "hiqdev/hidev-phpunit": "dev-master",
+                "hiqdev/hidev-readme": "dev-master",
+                "hiqdev/hidev-scrutinizer": "dev-master",
+                "hiqdev/hidev-travis": "dev-master"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "1.0": "1.0.x-dev"
+                },
+                "config-plugin": {
+                    "hidev": "src/config/hidev.php"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "hiqdev\\hidev\\license\\": "src",
+                    "hidev\\license\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Andrii Vasyliev",
+                    "email": "sol@hiqdev.com",
+                    "homepage": "http://hipanel.com/",
+                    "role": "Project lead"
+                },
+                {
+                    "name": "Dmitry Naumenko",
+                    "email": "d.naumenko.a@gmail.com",
+                    "homepage": "http://silverfire.me/",
+                    "role": "Lead backend developer"
+                },
+                {
+                    "name": "Andrey Klochok",
+                    "email": "andreyklochok@gmail.com",
+                    "homepage": "http://hiqdev.com/",
+                    "role": "Lead frontend developer"
+                },
+                {
+                    "name": "Yuriy Myronchuk",
+                    "email": "bladeroot@gmail.com",
+                    "homepage": "http://hiqdev.com/",
+                    "role": "QA Lead"
+                }
+            ],
+            "description": "HiDev plugin for license generation",
+            "homepage": "https://github.com/hiqdev/hidev-license",
+            "keywords": [
+                "hidev",
+                "license",
+                "plugin"
+            ],
+            "time": "2018-12-09T11:17:28+00:00"
+        },
+        {
+            "name": "hiqdev/hidev-php",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hiqdev/hidev-php.git",
+                "reference": "05dd30d873a40c8ebf03cbd67e77834a336e9616"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hiqdev/hidev-php/zipball/05dd30d873a40c8ebf03cbd67e77834a336e9616",
+                "reference": "05dd30d873a40c8ebf03cbd67e77834a336e9616",
+                "shasum": ""
+            },
+            "require": {
+                "hiqdev/composer-config-plugin": "*@dev",
+                "hiqdev/hidev-chkipper": "*",
+                "hiqdev/hidev-composer": "*",
+                "hiqdev/hidev-license": "*",
+                "hiqdev/hidev-php-cs-fixer": "*",
+                "hiqdev/hidev-phpstan": "*",
+                "hiqdev/hidev-phpunit": "*",
+                "hiqdev/hidev-scrutinizer": "*",
+                "hiqdev/hidev-travis": "*"
+            },
+            "require-dev": {
+                "hiqdev/hidev": "dev-master",
+                "hiqdev/hidev-chkipper": "dev-master",
+                "hiqdev/hidev-composer": "dev-master",
+                "hiqdev/hidev-hiqdev": "dev-master",
+                "hiqdev/hidev-license": "dev-master",
+                "hiqdev/hidev-php-cs-fixer": "dev-master",
+                "hiqdev/hidev-phpstan": "dev-master",
+                "hiqdev/hidev-phpunit": "dev-master",
+                "hiqdev/hidev-readme": "dev-master",
+                "hiqdev/hidev-scrutinizer": "dev-master",
+                "hiqdev/hidev-travis": "dev-master"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "1.0": "1.0.x-dev"
+                },
+                "config-plugin": {
+                    "hidev": "src/config/hidev.php"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "hidev\\php\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Andrii Vasyliev",
+                    "email": "sol@hiqdev.com",
+                    "homepage": "http://hipanel.com/",
+                    "role": "Project lead"
+                },
+                {
+                    "name": "Dmitry Naumenko",
+                    "email": "d.naumenko.a@gmail.com",
+                    "homepage": "http://silverfire.me/",
+                    "role": "Lead backend developer"
+                },
+                {
+                    "name": "Andrey Klochok",
+                    "email": "andreyklochok@gmail.com",
+                    "homepage": "http://hiqdev.com/",
+                    "role": "Lead frontend developer"
+                },
+                {
+                    "name": "Yuriy Myronchuk",
+                    "email": "bladeroot@gmail.com",
+                    "homepage": "http://hiqdev.com/",
+                    "role": "QA Lead"
+                }
+            ],
+            "description": "HiDev plugin for PHP projects",
+            "homepage": "https://github.com/hiqdev/hidev-php",
+            "keywords": [
+                "config",
+                "hidev",
+                "php"
+            ],
+            "time": "2018-12-08T06:20:48+00:00"
+        },
+        {
+            "name": "hiqdev/hidev-php-cs-fixer",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hiqdev/hidev-php-cs-fixer.git",
+                "reference": "b61e1fef141f36c3b719f9e93038b41698db03a1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hiqdev/hidev-php-cs-fixer/zipball/b61e1fef141f36c3b719f9e93038b41698db03a1",
+                "reference": "b61e1fef141f36c3b719f9e93038b41698db03a1",
+                "shasum": ""
+            },
+            "require": {
+                "hiqdev/composer-config-plugin": "*@dev"
+            },
+            "require-dev": {
+                "hiqdev/hidev-composer": "*@dev",
+                "hiqdev/hidev-hiqdev": "*@dev",
+                "hiqdev/hidev-license": "*@dev",
+                "hiqdev/hidev-php": "*@dev",
+                "hiqdev/hidev-phpunit": "*@dev",
+                "hiqdev/hidev-readme": "*@dev",
+                "hiqdev/hidev-scrutinizer": "*@dev",
+                "hiqdev/hidev-travis": "*@dev"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "1.0": "1.0.x-dev"
+                },
+                "config-plugin": {
+                    "hidev": "src/config/hidev.php"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "hidev\\phpcsfixer\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Andrii Vasyliev",
+                    "email": "sol@hiqdev.com",
+                    "homepage": "http://hipanel.com/",
+                    "role": "Project lead"
+                },
+                {
+                    "name": "Dmitry Naumenko",
+                    "email": "d.naumenko.a@gmail.com",
+                    "homepage": "http://silverfire.me/",
+                    "role": "Lead backend developer"
+                },
+                {
+                    "name": "Andrey Klochok",
+                    "email": "andreyklochok@gmail.com",
+                    "homepage": "http://hiqdev.com/",
+                    "role": "Lead frontend developer"
+                },
+                {
+                    "name": "Yuriy Myronchuk",
+                    "email": "bladeroot@gmail.com",
+                    "homepage": "http://hiqdev.com/",
+                    "role": "QA Lead"
+                }
+            ],
+            "description": "HiDev plugin for PHP-CS-Fixer",
+            "homepage": "https://github.com/hiqdev/hidev-php-cs-fixer",
+            "keywords": [
+                "hidev",
+                "php-cs-fixer",
+                "plugin"
+            ],
+            "time": "2018-12-12T17:36:46+00:00"
+        },
+        {
+            "name": "hiqdev/hidev-phpstan",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hiqdev/hidev-phpstan.git",
+                "reference": "7f7706f976b0ad10c4de088d6b6e7b8fd98205b5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hiqdev/hidev-phpstan/zipball/7f7706f976b0ad10c4de088d6b6e7b8fd98205b5",
+                "reference": "7f7706f976b0ad10c4de088d6b6e7b8fd98205b5",
+                "shasum": ""
+            },
+            "require": {
+                "hiqdev/composer-config-plugin": "*@dev"
+            },
+            "require-dev": {
+                "hiqdev/hidev": "dev-master",
+                "hiqdev/hidev-composer": "dev-master",
+                "hiqdev/hidev-hiqdev": "dev-master",
+                "hiqdev/hidev-license": "dev-master",
+                "hiqdev/hidev-php": "dev-master",
+                "hiqdev/hidev-php-cs-fixer": "dev-master",
+                "hiqdev/hidev-readme": "dev-master",
+                "hiqdev/hidev-scrutinizer": "dev-master",
+                "hiqdev/hidev-travis": "dev-master"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "1.0": "1.0.x-dev"
+                },
+                "config-plugin": {
+                    "hidev": "src/config/hidev.php"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "hidev\\phpstan\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Andrii Vasyliev",
+                    "email": "sol@hiqdev.com",
+                    "homepage": "http://hipanel.com/",
+                    "role": "Project lead"
+                },
+                {
+                    "name": "Dmitry Naumenko",
+                    "email": "d.naumenko.a@gmail.com",
+                    "homepage": "http://silverfire.me/",
+                    "role": "Lead backend developer"
+                },
+                {
+                    "name": "Andrey Klochok",
+                    "email": "andreyklochok@gmail.com",
+                    "homepage": "http://hiqdev.com/",
+                    "role": "Lead frontend developer"
+                },
+                {
+                    "name": "Yuriy Myronchuk",
+                    "email": "bladeroot@gmail.com",
+                    "homepage": "http://hiqdev.com/",
+                    "role": "QA Lead"
+                }
+            ],
+            "description": "HiDev plugin for PHPStan",
+            "homepage": "https://github.com/hiqdev/hidev-phpstan",
+            "keywords": [
+                "PHPStan",
+                "hidev",
+                "plugin"
+            ],
+            "time": "2018-12-12T19:36:55+00:00"
+        },
+        {
+            "name": "hiqdev/hidev-phpunit",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hiqdev/hidev-phpunit.git",
+                "reference": "53f3567490b20c720b911e4486a010585db13d28"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hiqdev/hidev-phpunit/zipball/53f3567490b20c720b911e4486a010585db13d28",
+                "reference": "53f3567490b20c720b911e4486a010585db13d28",
+                "shasum": ""
+            },
+            "require": {
+                "hiqdev/composer-config-plugin": "*@dev"
+            },
+            "require-dev": {
+                "hiqdev/hidev": "dev-master",
+                "hiqdev/hidev-composer": "dev-master",
+                "hiqdev/hidev-hiqdev": "dev-master",
+                "hiqdev/hidev-license": "dev-master",
+                "hiqdev/hidev-php": "dev-master",
+                "hiqdev/hidev-php-cs-fixer": "dev-master",
+                "hiqdev/hidev-readme": "dev-master",
+                "hiqdev/hidev-scrutinizer": "dev-master",
+                "hiqdev/hidev-travis": "dev-master"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "1.0": "1.0.x-dev"
+                },
+                "config-plugin": {
+                    "hidev": "src/config/hidev.php"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "hidev\\phpunit\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Andrii Vasyliev",
+                    "email": "sol@hiqdev.com",
+                    "homepage": "http://hipanel.com/",
+                    "role": "Project lead"
+                },
+                {
+                    "name": "Dmitry Naumenko",
+                    "email": "d.naumenko.a@gmail.com",
+                    "homepage": "http://silverfire.me/",
+                    "role": "Lead backend developer"
+                },
+                {
+                    "name": "Andrey Klochok",
+                    "email": "andreyklochok@gmail.com",
+                    "homepage": "http://hiqdev.com/",
+                    "role": "Lead frontend developer"
+                },
+                {
+                    "name": "Yuriy Myronchuk",
+                    "email": "bladeroot@gmail.com",
+                    "homepage": "http://hiqdev.com/",
+                    "role": "QA Lead"
+                }
+            ],
+            "description": "HiDev plugin for PHPUnit",
+            "homepage": "https://github.com/hiqdev/hidev-phpunit",
+            "keywords": [
+                "hidev",
+                "phpunit",
+                "plugin"
+            ],
+            "time": "2018-12-12T19:06:16+00:00"
+        },
+        {
+            "name": "hiqdev/hidev-readme",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hiqdev/hidev-readme.git",
+                "reference": "87e3fe8a464d1b25a94eed072b50c877174f6083"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hiqdev/hidev-readme/zipball/87e3fe8a464d1b25a94eed072b50c877174f6083",
+                "reference": "87e3fe8a464d1b25a94eed072b50c877174f6083",
+                "shasum": ""
+            },
+            "require": {
+                "hiqdev/composer-config-plugin": "*@dev"
+            },
+            "require-dev": {
+                "hiqdev/hidev": "dev-master",
+                "hiqdev/hidev-chkipper": "dev-master",
+                "hiqdev/hidev-composer": "dev-master",
+                "hiqdev/hidev-hiqdev": "dev-master",
+                "hiqdev/hidev-license": "dev-master",
+                "hiqdev/hidev-php": "dev-master",
+                "hiqdev/hidev-php-cs-fixer": "dev-master",
+                "hiqdev/hidev-phpunit": "dev-master",
+                "hiqdev/hidev-scrutinizer": "dev-master",
+                "hiqdev/hidev-travis": "dev-master"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "1.0": "1.0.x-dev"
+                },
+                "config-plugin": {
+                    "hidev": "src/config/hidev.php"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "hidev\\readme\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Andrii Vasyliev",
+                    "email": "sol@hiqdev.com",
+                    "homepage": "http://hipanel.com/",
+                    "role": "Project lead"
+                },
+                {
+                    "name": "Dmitry Naumenko",
+                    "email": "d.naumenko.a@gmail.com",
+                    "homepage": "http://silverfire.me/",
+                    "role": "Lead backend developer"
+                },
+                {
+                    "name": "Andrey Klochok",
+                    "email": "andreyklochok@gmail.com",
+                    "homepage": "http://hiqdev.com/",
+                    "role": "Lead frontend developer"
+                },
+                {
+                    "name": "Yuriy Myronchuk",
+                    "email": "bladeroot@gmail.com",
+                    "homepage": "http://hiqdev.com/",
+                    "role": "QA Lead"
+                }
+            ],
+            "description": "README plugin for HiDev",
+            "homepage": "https://github.com/hiqdev/hidev-readme",
+            "keywords": [
+                "hidev",
+                "plugin",
+                "readme"
+            ],
+            "time": "2018-12-06T10:25:02+00:00"
+        },
+        {
+            "name": "hiqdev/hidev-scrutinizer",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hiqdev/hidev-scrutinizer.git",
+                "reference": "24a0818f8d3752aaefcf714dc62ea7bfcb4e845e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hiqdev/hidev-scrutinizer/zipball/24a0818f8d3752aaefcf714dc62ea7bfcb4e845e",
+                "reference": "24a0818f8d3752aaefcf714dc62ea7bfcb4e845e",
+                "shasum": ""
+            },
+            "require": {
+                "hiqdev/composer-config-plugin": "*@dev"
+            },
+            "require-dev": {
+                "hiqdev/hidev": "dev-master",
+                "hiqdev/hidev-composer": "dev-master",
+                "hiqdev/hidev-hiqdev": "dev-master",
+                "hiqdev/hidev-license": "dev-master",
+                "hiqdev/hidev-php": "dev-master",
+                "hiqdev/hidev-php-cs-fixer": "dev-master",
+                "hiqdev/hidev-phpunit": "dev-master",
+                "hiqdev/hidev-readme": "dev-master",
+                "hiqdev/hidev-travis": "dev-master"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "1.0": "1.0.x-dev"
+                },
+                "config-plugin": {
+                    "hidev": "src/config/hidev.php"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "hidev\\scrutinizer\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Andrii Vasyliev",
+                    "email": "sol@hiqdev.com",
+                    "homepage": "http://hipanel.com/",
+                    "role": "Project lead"
+                },
+                {
+                    "name": "Dmitry Naumenko",
+                    "email": "d.naumenko.a@gmail.com",
+                    "homepage": "http://silverfire.me/",
+                    "role": "Lead backend developer"
+                },
+                {
+                    "name": "Andrey Klochok",
+                    "email": "andreyklochok@gmail.com",
+                    "homepage": "http://hiqdev.com/",
+                    "role": "Lead frontend developer"
+                },
+                {
+                    "name": "Yuriy Myronchuk",
+                    "email": "bladeroot@gmail.com",
+                    "homepage": "http://hiqdev.com/",
+                    "role": "QA Lead"
+                }
+            ],
+            "description": "HiDev plugin for Scrutinizer CI",
+            "homepage": "https://github.com/hiqdev/hidev-scrutinizer",
+            "keywords": [
+                "continuous integration",
+                "hidev",
+                "plugin",
+                "scrutinizer"
+            ],
+            "time": "2018-12-10T15:33:08+00:00"
+        },
+        {
+            "name": "hiqdev/hidev-travis",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hiqdev/hidev-travis.git",
+                "reference": "10292af5cf4dbe6041c9d07b3c3b7b9ea4f70a85"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hiqdev/hidev-travis/zipball/10292af5cf4dbe6041c9d07b3c3b7b9ea4f70a85",
+                "reference": "10292af5cf4dbe6041c9d07b3c3b7b9ea4f70a85",
+                "shasum": ""
+            },
+            "require": {
+                "hiqdev/composer-config-plugin": "*@dev"
+            },
+            "require-dev": {
+                "hiqdev/hidev": "dev-master",
+                "hiqdev/hidev-composer": "dev-master",
+                "hiqdev/hidev-hiqdev": "dev-master",
+                "hiqdev/hidev-license": "dev-master",
+                "hiqdev/hidev-php": "dev-master",
+                "hiqdev/hidev-php-cs-fixer": "dev-master",
+                "hiqdev/hidev-phpunit": "dev-master",
+                "hiqdev/hidev-readme": "dev-master",
+                "hiqdev/hidev-scrutinizer": "dev-master"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "1.0": "1.0.x-dev"
+                },
+                "config-plugin": {
+                    "hidev": "src/config/hidev.php"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "hidev\\travis\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Andrii Vasyliev",
+                    "email": "sol@hiqdev.com",
+                    "homepage": "http://hipanel.com/",
+                    "role": "Project lead"
+                },
+                {
+                    "name": "Dmitry Naumenko",
+                    "email": "d.naumenko.a@gmail.com",
+                    "homepage": "http://silverfire.me/",
+                    "role": "Lead backend developer"
+                },
+                {
+                    "name": "Andrey Klochok",
+                    "email": "andreyklochok@gmail.com",
+                    "homepage": "http://hiqdev.com/",
+                    "role": "Lead frontend developer"
+                },
+                {
+                    "name": "Yuriy Myronchuk",
+                    "email": "bladeroot@gmail.com",
+                    "homepage": "http://hiqdev.com/",
+                    "role": "QA Lead"
+                }
+            ],
+            "description": "Travis CI plugin for HiDev",
+            "homepage": "https://github.com/hiqdev/hidev-travis",
+            "keywords": [
+                "continuous integration",
+                "hidev",
+                "plugin",
+                "travis"
+            ],
+            "time": "2018-12-10T14:49:59+00:00"
+        },
+        {
+            "name": "hiqdev/php-collection",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hiqdev/php-collection.git",
+                "reference": "7f7fdacb62ff848147607a018ee889a4ae8fb010"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hiqdev/php-collection/zipball/7f7fdacb62ff848147607a018ee889a4ae8fb010",
+                "reference": "7f7fdacb62ff848147607a018ee889a4ae8fb010",
+                "shasum": ""
+            },
+            "require-dev": {
+                "hiqdev/hidev-hiqdev": "*",
+                "hiqdev/hidev-php": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "hiqdev\\php\\collection\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Andrii Vasyliev",
+                    "email": "sol@hiqdev.com",
+                    "homepage": "http://hipanel.com/",
+                    "role": "Project lead"
+                },
+                {
+                    "name": "Dmitry Naumenko",
+                    "email": "d.naumenko.a@gmail.com",
+                    "homepage": "http://silverfire.me/",
+                    "role": "Lead backend developer"
+                },
+                {
+                    "name": "Andrey Klochok",
+                    "email": "andreyklochok@gmail.com",
+                    "homepage": "http://hiqdev.com/",
+                    "role": "Lead frontend developer"
+                },
+                {
+                    "name": "Yuriy Myronchuk",
+                    "email": "bladeroot@gmail.com",
+                    "homepage": "http://hiqdev.com/",
+                    "role": "QA Lead"
+                }
+            ],
+            "description": "Collection library for PHP",
+            "homepage": "https://github.com/hiqdev/php-collection",
+            "keywords": [
+                "collection",
+                "library",
+                "php"
+            ],
+            "time": "2018-12-15T18:01:24+00:00"
+        },
+        {
+            "name": "hiqdev/yii2-collection",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hiqdev/yii2-collection.git",
+                "reference": "6d7c440849fcedf1160f77046fe5a75d497bdd48"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hiqdev/yii2-collection/zipball/6d7c440849fcedf1160f77046fe5a75d497bdd48",
+                "reference": "6d7c440849fcedf1160f77046fe5a75d497bdd48",
+                "shasum": ""
+            },
+            "require": {
+                "hiqdev/php-collection": "*",
+                "yiisoft/yii2": "^2.0 || ^3.0"
+            },
+            "require-dev": {
+                "hiqdev/hidev-hiqdev": "<2.0",
+                "hiqdev/hidev-php": "<2.0"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "hiqdev\\yii2\\collection\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Andrii Vasyliev",
+                    "email": "sol@hiqdev.com",
+                    "homepage": "http://hipanel.com/",
+                    "role": "Project lead"
+                },
+                {
+                    "name": "Dmitry Naumenko",
+                    "email": "d.naumenko.a@gmail.com",
+                    "homepage": "http://silverfire.me/",
+                    "role": "Lead backend developer"
+                },
+                {
+                    "name": "Andrey Klochok",
+                    "email": "andreyklochok@gmail.com",
+                    "homepage": "http://hiqdev.com/",
+                    "role": "Lead frontend developer"
+                },
+                {
+                    "name": "Yuriy Myronchuk",
+                    "email": "bladeroot@gmail.com",
+                    "homepage": "http://hiqdev.com/",
+                    "role": "QA Lead"
+                }
+            ],
+            "description": "Collection library for Yii2",
+            "homepage": "https://github.com/hiqdev/yii2-collection",
+            "keywords": [
+                "collection",
+                "extension",
+                "yii2"
+            ],
+            "time": "2018-06-18T18:05:37+00:00"
+        },
+        {
+            "name": "symfony/yaml",
+            "version": "3.4.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/yaml.git",
+                "reference": "212a27b731e5bfb735679d1ffaac82bd6a1dc996"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/212a27b731e5bfb735679d1ffaac82bd6a1dc996",
+                "reference": "212a27b731e5bfb735679d1ffaac82bd6a1dc996",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.5.9|>=7.0.8",
+                "symfony/polyfill-ctype": "~1.8"
+            },
+            "conflict": {
+                "symfony/console": "<3.4"
+            },
+            "require-dev": {
+                "symfony/console": "~3.4|~4.0"
+            },
+            "suggest": {
+                "symfony/console": "For validating YAML files using the lint command"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.4-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Yaml\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Yaml Component",
+            "homepage": "https://symfony.com",
+            "time": "2019-03-25T07:48:46+00:00"
+        },
+        {
+            "name": "twig/twig",
+            "version": "1.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/twigphp/Twig.git",
+                "reference": "6d6fe616299be68ac0c3f9a9664aa257f0de2bcc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/6d6fe616299be68ac0c3f9a9664aa257f0de2bcc",
+                "reference": "6d6fe616299be68ac0c3f9a9664aa257f0de2bcc",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0",
+                "symfony/polyfill-ctype": "^1.8"
+            },
+            "require-dev": {
+                "psr/container": "^1.0",
+                "symfony/debug": "^2.7",
+                "symfony/phpunit-bridge": "^3.4.19|^4.1.8"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.40-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Twig_": "lib/"
+                },
+                "psr-4": {
+                    "Twig\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com",
+                    "homepage": "http://fabien.potencier.org",
+                    "role": "Lead Developer"
+                },
+                {
+                    "name": "Armin Ronacher",
+                    "email": "armin.ronacher@active-4.com",
+                    "role": "Project Founder"
+                },
+                {
+                    "name": "Twig Team",
+                    "homepage": "https://twig.symfony.com/contributors",
+                    "role": "Contributors"
+                }
+            ],
+            "description": "Twig, the flexible, fast, and secure template language for PHP",
+            "homepage": "https://twig.symfony.com",
+            "keywords": [
+                "templating"
+            ],
+            "time": "2019-04-25T10:16:24+00:00"
+        },
+        {
+            "name": "yiisoft/yii2-twig",
+            "version": "2.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yiisoft/yii2-twig.git",
+                "reference": "397e711da9aae8b813778e3504b23d80fb1a86f2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yiisoft/yii2-twig/zipball/397e711da9aae8b813778e3504b23d80fb1a86f2",
+                "reference": "397e711da9aae8b813778e3504b23d80fb1a86f2",
+                "shasum": ""
+            },
+            "require": {
+                "twig/twig": "~1.0",
+                "yiisoft/yii2": ">=2.0.4"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                },
+                "asset-installer-paths": {
+                    "npm-asset-library": "vendor/npm",
+                    "bower-asset-library": "vendor/bower"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "yii\\twig\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Alexander Makarov",
+                    "email": "sam@rmcreative.ru"
+                }
+            ],
+            "description": "The Twig integration for the Yii framework",
+            "keywords": [
+                "renderer",
+                "twig",
+                "yii2"
+            ],
+            "time": "2016-09-04T14:37:47+00:00"
+        }
+    ],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "yiisoft/yii2": 20,
+        "hiqdev/yii-compat": 20,
+        "hiqdev/hiapi": 20,
+        "hiqdev/yii2-autobus": 20,
+        "hiqdev/yii2-data-mapper": 20,
+        "hiqdev/hidev-php": 20,
+        "hiqdev/hidev-hiqdev": 20,
+        "hiqdev/hidev": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=7.2.0"
+    },
+    "platform-dev": []
+}
