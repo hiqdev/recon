@@ -29,6 +29,13 @@ return [
                 ],
             ],
 
+            \hiqdev\recon\core\Service\TaskLifecycle::class => [
+                '__class' => \hiqdev\recon\core\Service\TaskLifecycle::class,
+                '__construct()' => [
+                    \hiqdev\yii\compat\yii::referenceTo('task-lifecycle-emitter'),
+                ],
+            ],
+
             /// Request handling
             'task-lifecycle-emitter' => [
                 '__class' => \hiapi\event\ConfigurableEmitter::class,
@@ -38,15 +45,8 @@ return [
 //                        'event' => \hiqdev\recon\core\Service\TaskLifecycle::EVENT_RESOLVE_TASK,
 //                        'listener' => \hiqdev\recon\core\Service\TaskResolver::class,
 //                    ],
-                ]
+                ],
             ],
-
-            \hiqdev\recon\core\Service\TaskLifecycle::class => [
-                '__class' => \hiqdev\recon\core\Service\TaskLifecycle::class,
-                '__construct()' => [
-                    \hiqdev\yii\compat\yii::referenceTo('task-lifecycle-emitter')
-                ]
-            ]
         ]
     ]
 ];
