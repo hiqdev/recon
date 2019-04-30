@@ -7,6 +7,7 @@ use hiqdev\recon\core\Event\FailedTaskEvent;
 use hiqdev\recon\core\Event\TaskEvent;
 use hiqdev\recon\core\Exception\ReconException;
 use hiqdev\recon\core\Exception\SkipTaskException;
+use hiqdev\yii2\autobus\components\CommandBusInterface;
 use League\Event\EmitterInterface;
 use Psr\Log\LoggerInterface;
 use RuntimeException;
@@ -18,12 +19,11 @@ final class TaskLifecycle
      * Each handler MUST check, that task is not resolved yet `!$task->isResolved()`
      * and resolve, if this task resolving is its responsibility.
      */
-    public const EVENT_RESOLVE_TASK = 'TASK_RESOLVE';
-
-    public const EVENT_TASK_ACQUIRED = 'TASK_START';
-    public const EVENT_TASK_DONE     = 'TASK_DONE';
-    public const EVENT_TASK_FAILED   = 'TASK_FAILED';
-    public const EVENT_TASK_DELAYED  = 'TASK_DELAYED';
+    public const EVENT_RESOLVE_TASK  = __CLASS__ . '::EVENT_TASK_RESOLVE';
+    public const EVENT_TASK_ACQUIRED = __CLASS__ . '::EVENT_TASK_START';
+    public const EVENT_TASK_DONE     = __CLASS__ . '::EVENT_TASK_DONE';
+    public const EVENT_TASK_FAILED   = __CLASS__ . '::EVENT_TASK_FAILED';
+    public const EVENT_TASK_DELAYED  = __CLASS__ . '::EVENT_TASK_DELAYED';
 
     /**
      * @var EmitterInterface
@@ -33,11 +33,16 @@ final class TaskLifecycle
      * @var LoggerInterface
      */
     private $log;
+    /**
+     * @var CommandBusInterface
+     */
+    private $bus;
 
-    public function __construct(EmitterInterface $emitter, LoggerInterface $logger)
+    public function __construct(EmitterInterface $emitter, CommandBusInterface $bus, LoggerInterface $logger)
     {
         $this->emitter = $emitter;
         $this->log = $logger;
+        $this->bus = $bus;
     }
 
     public function run(IncomingTask $task)
@@ -60,6 +65,7 @@ final class TaskLifecycle
             $task->setResult($result);
 
             $this->emitter->emit(TaskEvent::create(self::EVENT_TASK_DONE, $task));
+
             return $result;
         } catch (SkipTaskException $e) {
             $this->log->debug('Task was skipped', [
