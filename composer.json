@@ -33,10 +33,6 @@
     "repositories": [
         {
             "type": "composer",
-            "url": "https://packagist.hiqdev.com"
-        },
-        {
-            "type": "composer",
             "url": "https://asset-packagist.org"
         }
     ]
