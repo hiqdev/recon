@@ -1,0 +1,19 @@
+#!/usr/bin/env php
+<?php
+
+use hiqdev\composer\config\Builder;
+use yii\di\Container;
+use yii\helpers\Yii;
+
+(function () {
+    $composerAutoload = dirname(__DIR__) . '/autoload.php';
+    if (!is_file($composerAutoload)) {
+        die('You need to set up the project dependencies using Composer');
+    }
+
+    require_once $composerAutoload;
+
+    $container = new Container(require Builder::path('console'));
+
+    Yii::setContainer($container);
+})();

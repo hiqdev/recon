@@ -25,6 +25,9 @@
         }
     },
     "minimum-stability": "dev",
+    "bin": [
+        "src/recon"
+    ],
     "repositories": [
         {
             "type": "composer",
