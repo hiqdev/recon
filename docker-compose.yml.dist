@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  php:
+    image: hiqdev/php:7.3-fpm
+    networks:
+      - local-network
+      - hiapi-network
+      - amqp-network
+    volumes:
+      - ./:/app
+      - var-volume:/HIAPI_VAR
+    environment:
+      - "ENV=${ENV}"
+
+networks:
+  local-network:
+    driver: bridge
+  hiapi-network:
+    external:
+      name: "${HIAPI_SITE}"
+  amqp-network:
+    external:
+      name: "amqp-${HIAPI_SITE}"
+
+volumes:
+  var-volume:
+    external:
+      name: "var-${HIAPI_SITE}"
