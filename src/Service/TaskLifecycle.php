@@ -5,6 +5,7 @@ namespace hiqdev\recon\core\Service;
 use hiqdev\recon\core\Command\IncomingTask;
 use hiqdev\recon\core\Event\FailedTaskEvent;
 use hiqdev\recon\core\Event\TaskEvent;
+use hiqdev\recon\core\Exception\DeferTaskException;
 use hiqdev\recon\core\Exception\ReconException;
 use hiqdev\recon\core\Exception\SkipTaskException;
 use hiqdev\yii2\autobus\components\CommandBusInterface;
@@ -23,7 +24,7 @@ final class TaskLifecycle
     public const EVENT_TASK_ACQUIRED = __CLASS__ . '::EVENT_TASK_START';
     public const EVENT_TASK_DONE     = __CLASS__ . '::EVENT_TASK_DONE';
     public const EVENT_TASK_FAILED   = __CLASS__ . '::EVENT_TASK_FAILED';
-    public const EVENT_TASK_DELAYED  = __CLASS__ . '::EVENT_TASK_DELAYED';
+    public const EVENT_TASK_DEFERRED = __CLASS__ . '::EVENT_TASK_DEFERRED';
 
     /**
      * @var EmitterInterface
@@ -73,6 +74,16 @@ final class TaskLifecycle
                 'reason' => $e->getMessage()
             ]);
             return null;
+        } catch (DeferTaskException $e) {
+            $this->log->debug('Task was deferred', [
+                'task_id' => $task->id,
+                'reason' => $e->getMessage()
+            ]);
+
+            $task->setResult($e->getMessage());
+            $this->emitter->emit(
+                FailedTaskEvent::create(self::EVENT_TASK_DEFERRED, $task)->setException($e)
+            );
         } catch (ReconException $e) {
             $this->log->error('An error occurred', [
                 'task_id' => $task->id,
@@ -82,8 +93,7 @@ final class TaskLifecycle
 
             $task->setResult($e->getMessage());
             $this->emitter->emit(
-                FailedTaskEvent::create(self::EVENT_TASK_FAILED, $task)
-                               ->setException($e)
+                FailedTaskEvent::create(self::EVENT_TASK_FAILED, $task)->setException($e)
             );
         } catch (Throwable $e) {
             $this->log->critical('An unknown error occurred', [
@@ -93,8 +103,7 @@ final class TaskLifecycle
             ]);
 
             $this->emitter->emit(
-                FailedTaskEvent::create(self::EVENT_TASK_FAILED, $task)
-                               ->setException($e)
+                FailedTaskEvent::create(self::EVENT_TASK_FAILED, $task)->setException($e)
             );
         }
     }

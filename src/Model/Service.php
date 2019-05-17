@@ -9,6 +9,7 @@ use yii\base\Model;
  *
  * @author Dmytro Naumenko <d.naumenko.a@gmail.com>
  *
+ * @property-read string $id
  * @property-read string $name
  * @property-read string $soft
  * @property-read string $ip
@@ -17,6 +18,7 @@ use yii\base\Model;
  */
 class Service extends Model
 {
+    public $id;
     public $name;
     public $soft;
     public $ip;
@@ -26,6 +28,7 @@ class Service extends Model
     public function attributes()
     {
         return [
+            'id',
             'name',
             'soft',
             'ip',
@@ -37,6 +40,7 @@ class Service extends Model
     public function rules()
     {
         return [
+            [['id'], 'string'],
             [['ip'], 'ip'],
             [['soft', 'name', 'bin', 'etc'], 'string'],
             [['name'], 'required'],
