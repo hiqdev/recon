@@ -20,7 +20,7 @@ class IncomingTask extends BaseCommand
     /**
      * @var string
      */
-    public $type;
+    public $name;
 
     /**
      * @var string|null

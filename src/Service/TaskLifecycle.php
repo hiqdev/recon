@@ -53,7 +53,7 @@ final class TaskLifecycle
         if (!$task->isResolved()) {
             $this->log->error('Task was not resolved to a command', [
                 'id' => $task->id,
-                'type' => $task->type,
+                'name' => $task->name,
             ]);
 
             throw new RuntimeException('Task was not resolved');
