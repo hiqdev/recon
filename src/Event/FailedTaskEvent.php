@@ -7,11 +7,14 @@ use Throwable;
 class FailedTaskEvent extends TaskEvent
 {
     /**
-     * @var Throwable
+     * @var Throwable|null
      */
     protected $exception;
 
-    public function getException(): Throwable
+    /**
+     * @return Throwable|null
+     */
+    public function getException(): ?Throwable
     {
         return $this->exception;
     }

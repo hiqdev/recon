@@ -3,6 +3,7 @@
 namespace hiqdev\recon\core\Command;
 
 use hiapi\commands\BaseCommand;
+use hiqdev\recon\core\Model\CommandHandlingResultInterface;
 use hiqdev\recon\core\Service\TaskResolverInterface;
 
 /**
@@ -23,10 +24,9 @@ class IncomingTask extends BaseCommand
     public $name;
 
     /**
-     * @var string|null
+     * @var CommandHandlingResultInterface|null
      */
-    protected $result;
-
+    private $result;
     /**
      * @var TaskResolverInterface
      */
@@ -100,12 +100,12 @@ class IncomingTask extends BaseCommand
         return $this->command;
     }
 
-    public function setResult(string $result): void
+    public function setResult(CommandHandlingResultInterface $result): void
     {
         $this->result = $result;
     }
 
-    public function getResult(): ?string
+    public function getResult(): ?CommandHandlingResultInterface
     {
         return $this->result;
     }

@@ -8,6 +8,8 @@ use hiqdev\recon\core\Event\TaskEvent;
 use hiqdev\recon\core\Exception\DeferTaskException;
 use hiqdev\recon\core\Exception\ReconException;
 use hiqdev\recon\core\Exception\SkipTaskException;
+use hiqdev\recon\core\Model\CommandHandlingResultInterface;
+use hiqdev\recon\core\Model\SimpleCommandHandlingResult;
 use hiqdev\yii2\autobus\components\CommandBusInterface;
 use League\Event\EmitterInterface;
 use Psr\Log\LoggerInterface;
@@ -20,11 +22,12 @@ final class TaskLifecycle
      * Each handler MUST check, that task is not resolved yet `!$task->isResolved()`
      * and resolve, if this task resolving is its responsibility.
      */
-    public const EVENT_RESOLVE_TASK  = __CLASS__ . '::EVENT_TASK_RESOLVE';
-    public const EVENT_TASK_ACQUIRED = __CLASS__ . '::EVENT_TASK_START';
-    public const EVENT_TASK_DONE     = __CLASS__ . '::EVENT_TASK_DONE';
-    public const EVENT_TASK_FAILED   = __CLASS__ . '::EVENT_TASK_FAILED';
-    public const EVENT_TASK_DEFERRED = __CLASS__ . '::EVENT_TASK_DEFERRED';
+    public const EVENT_RESOLVE_TASK   = __CLASS__ . '::EVENT_TASK_RESOLVE';
+    public const EVENT_TASK_ACQUIRED  = __CLASS__ . '::EVENT_TASK_START';
+    public const EVENT_TASK_CONTINUES = __CLASS__ . '::EVENT_TASK_CONTINUES';
+    public const EVENT_TASK_DONE      = __CLASS__ . '::EVENT_TASK_DONE';
+    public const EVENT_TASK_FAILED    = __CLASS__ . '::EVENT_TASK_FAILED';
+    public const EVENT_TASK_DEFERRED  = __CLASS__ . '::EVENT_TASK_DEFERRED';
 
     /**
      * @var EmitterInterface
@@ -46,10 +49,8 @@ final class TaskLifecycle
         $this->bus = $bus;
     }
 
-    public function run(IncomingTask $task)
+    private function ensureTaskIsResolved(IncomingTask $task): void
     {
-        $this->emitter->emit(TaskEvent::create(self::EVENT_RESOLVE_TASK, $task));
-
         if (!$task->isResolved()) {
             $this->log->error('Task was not resolved to a command', [
                 'id' => $task->id,
@@ -58,22 +59,49 @@ final class TaskLifecycle
 
             throw new RuntimeException('Task was not resolved');
         }
+    }
 
-        try {
-            $this->emitter->emit(TaskEvent::create(self::EVENT_TASK_ACQUIRED, $task));
+    private function handleTask(IncomingTask $task): void
+    {
+        $result = $this->bus->handle($task->getCommand());
 
-            $result = $this->bus->handle($task->getCommand());
-            $task->setResult($result);
+        if ($result instanceof CommandHandlingResultInterface) {
+            $handlingResult = $result;
+        } elseif (!is_string($result)) {
+            $handlingResult = new SimpleCommandHandlingResult($task->getCommand());
+            $handlingResult->stdout = $result;
+        } else {
+            $this->log->warning('Command handler returned unexpected result', [
+                'task' => $task->getCommand(),
+                'result' => $result
+            ]);
+            $handlingResult = new SimpleCommandHandlingResult($task->getCommand());
+        }
 
+        $task->setResult($handlingResult);
+
+        if ($handlingResult->isSuccess() === true) {
             $this->emitter->emit(TaskEvent::create(self::EVENT_TASK_DONE, $task));
+        } elseif ($handlingResult->isSuccess() === false) {
+            $this->emitter->emit(FailedTaskEvent::create(self::EVENT_TASK_FAILED, $task));
+        } elseif ($handlingResult->isSuccess() === null) {
+            $this->emitter->emit(TaskEvent::create(self::EVENT_TASK_CONTINUES, $task));
+        }
+    }
 
-            return $result;
+    public function run(IncomingTask $task): void
+    {
+        try {
+            $this->emitter->emit(TaskEvent::create(self::EVENT_RESOLVE_TASK, $task));
+            $this->ensureTaskIsResolved($task);
+            $this->emitter->emit(TaskEvent::create(self::EVENT_TASK_ACQUIRED, $task));
+            $this->handleTask($task);
         } catch (SkipTaskException $e) {
             $this->log->debug('Task was skipped', [
                 'task_id' => $task->id,
                 'reason' => $e->getMessage()
             ]);
-            return null;
+            return;
         } catch (DeferTaskException $e) {
             $this->log->debug('Task was deferred', [
                 'task_id' => $task->id,
@@ -91,7 +119,7 @@ final class TaskLifecycle
                 'stacktrace' => $e->getTraceAsString()
             ]);
 
-            $task->setResult($e->getMessage());
+            $task->setResult($this->buildHandlingResultOutOfException($task, $e));
             $this->emitter->emit(
                 FailedTaskEvent::create(self::EVENT_TASK_FAILED, $task)->setException($e)
             );
@@ -102,9 +130,19 @@ final class TaskLifecycle
                 'stacktrace' => $e->getTraceAsString()
             ]);
 
+            $task->setResult($this->buildHandlingResultOutOfException($task, $e));
             $this->emitter->emit(
                 FailedTaskEvent::create(self::EVENT_TASK_FAILED, $task)->setException($e)
             );
         }
+    }
+
+    private function buildHandlingResultOutOfException(IncomingTask $task, \Throwable $e): CommandHandlingResultInterface
+    {
+        $result = new SimpleCommandHandlingResult($task->getCommand());
+        $result->isSuccess = false;
+        $result->stderr = $e->getMessage();
+
+        return $result;
     }
 }
