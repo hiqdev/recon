@@ -49,15 +49,14 @@ final class TaskLifecycle
         $this->bus = $bus;
     }
 
+    /**
+     * @param IncomingTask $task
+     * @throws SkipTaskException when task could not be resolved to command
+     */
     private function ensureTaskIsResolved(IncomingTask $task): void
     {
         if (!$task->isResolved()) {
-            $this->log->error('Task was not resolved to a command', [
-                'id' => $task->id,
-                'name' => $task->name,
-            ]);
-
-            throw new RuntimeException('Task was not resolved');
+            throw new SkipTaskException('Task was not resolved');
         }
     }
 
@@ -99,12 +98,14 @@ final class TaskLifecycle
         } catch (SkipTaskException $e) {
             $this->log->debug('Task was skipped', [
                 'task_id' => $task->id,
+                'task_name' => $task->name,
                 'reason' => $e->getMessage()
             ]);
             return;
         } catch (DeferTaskException $e) {
             $this->log->debug('Task was deferred', [
                 'task_id' => $task->id,
+                'task_name' => $task->name,
                 'reason' => $e->getMessage()
             ]);
 
@@ -115,6 +116,7 @@ final class TaskLifecycle
         } catch (ReconException $e) {
             $this->log->error('An error occurred', [
                 'task_id' => $task->id,
+                'task_name' => $task->name,
                 'reason' => $e->getMessage(),
                 'stacktrace' => $e->getTraceAsString()
             ]);
@@ -126,6 +128,7 @@ final class TaskLifecycle
         } catch (Throwable $e) {
             $this->log->critical('An unknown error occurred', [
                 'task_id' => $task->id,
+                'task_name' => $task->name,
                 'reason' => $e->getMessage(),
                 'stacktrace' => $e->getTraceAsString()
             ]);
