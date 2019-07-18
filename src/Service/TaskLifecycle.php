@@ -109,7 +109,7 @@ final class TaskLifecycle
                 'reason' => $e->getMessage()
             ]);
 
-            $task->setResult($e->getMessage());
+            $task->setResult($this->buildHandlingResultOutOfException($task, $e));
             $this->emitter->emit(
                 FailedTaskEvent::create(self::EVENT_TASK_DEFERRED, $task)->setException($e)
             );
