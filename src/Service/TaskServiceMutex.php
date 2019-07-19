@@ -72,7 +72,9 @@ class TaskServiceMutex extends AbstractListener
         }
         $service = $command->getService();
 
-        if (!$this->mutex->acquire($this->lockName($service), 2)) {
+        $lockName = $this->lockName($service);
+        $this->log->debug("Acquiring lock $lockName");
+        if (!$this->mutex->acquire($lockName, 2)) {
             throw new DeferTaskException('Could not acquire lock for service ' . $service->id);
         }
     }
@@ -85,7 +87,9 @@ class TaskServiceMutex extends AbstractListener
         }
         $service = $command->getService();
 
-        $this->mutex->release($this->lockName($service));
+        $lockName = $this->lockName($service);
+        $this->mutex->release($lockName);
+        $this->log->debug("Released lock $lockName");
     }
 
     private function lockName(Service $service): string
