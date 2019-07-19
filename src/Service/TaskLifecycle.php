@@ -66,9 +66,11 @@ final class TaskLifecycle
 
         if ($result instanceof CommandHandlingResultInterface) {
             $handlingResult = $result;
-        } elseif (!is_string($result)) {
+        } elseif (is_string($result)) {
             $handlingResult = new SimpleCommandHandlingResult($task->getCommand());
             $handlingResult->stdout = $result;
+        } elseif ($result === null) {
+            $handlingResult = new SimpleCommandHandlingResult($task->getCommand());
         } else {
             $this->log->warning('Command handler returned unexpected result', [
                 'task' => $task->getCommand(),
