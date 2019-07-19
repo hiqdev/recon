@@ -2,14 +2,10 @@
 
 namespace hiqdev\recon\core\Service;
 
-use GuzzleHttp\Client;
-use hiqdev\recon\core\Command\IncomingTask;
-use hiqdev\recon\core\Event\FailedTaskEvent;
 use hiqdev\recon\core\Event\TaskEvent;
 use hiqdev\recon\core\Exception\DeferTaskException;
 use hiqdev\recon\core\Model\Service;
 use hiqdev\recon\core\Model\ServiceAwareInterface;
-use InvalidArgumentException;
 use League\Event\AbstractListener;
 use League\Event\EventInterface;
 use Psr\Log\LoggerInterface;
@@ -25,8 +21,11 @@ class TaskServiceMutex extends AbstractListener
 {
     private const METHOD_MAP = [
         TaskLifecycle::EVENT_TASK_ACQUIRED => 'acquireLock',
+
         TaskLifecycle::EVENT_TASK_DONE => 'releaseLock',
         TaskLifecycle::EVENT_TASK_FAILED => 'releaseLock',
+        TaskLifecycle::EVENT_TASK_DEFERRED => 'releaseLock',
+        TaskLifecycle::EVENT_TASK_CONTINUES => 'releaseLock',
     ];
     /**
      * @var LoggerInterface
