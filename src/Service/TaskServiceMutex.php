@@ -88,8 +88,8 @@ class TaskServiceMutex extends AbstractListener
         $service = $command->getService();
 
         $lockName = $this->lockName($service);
-        $this->mutex->release($lockName);
-        $this->log->debug("Released lock $lockName");
+        $wasReleased = $this->mutex->release($lockName);
+        $this->log->debug("Releasing lock $lockName. Result: $wasReleased");
     }
 
     private function lockName(Service $service): string
