@@ -13,6 +13,9 @@ $app = [
 ];
 
 $singletons = [
+    \yii\mutex\FileMutex::class => \yii\mutex\FileMutex::class,
+    \hiqdev\recon\core\Service\TaskServiceMutex::class => \hiqdev\recon\core\Service\TaskServiceMutex::class,
+
     \hiqdev\recon\core\Service\AmqpBindingsProvider::class => [
         '__class' => \hiqdev\recon\core\Service\AmqpBindingsProvider::class,
     ],
