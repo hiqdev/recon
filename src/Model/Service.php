@@ -40,6 +40,7 @@ class Service extends Model
     public function rules()
     {
         return [
+            [['id'], 'filter', 'filter' => 'strval', 'skipOnEmpty' => true],
             [['id'], 'string'],
             [['ip'], 'ip'],
             [['soft', 'name', 'bin', 'etc'], 'string'],
