@@ -38,11 +38,6 @@ class IncomingTask extends BaseCommand
     private $command;
 
     /**
-     * @var array incoming task raw data
-     */
-    private $rawdata;
-
-    /**
      * @return array
      */
     public function rules()
@@ -51,22 +46,6 @@ class IncomingTask extends BaseCommand
             [['id', 'name'], 'string'],
             [['id', 'name'], 'required'],
         ];
-    }
-
-    public function load($data, $formName = null)
-    {
-        $this->rawdata = (array)$data;
-        parent::load($data, $formName);
-    }
-
-    public function getRaw($name, $default = null)
-    {
-        return $this->rawdata[$name] ?? $default;
-    }
-
-    public function getRawdata(): array
-    {
-        return $this->rawdata;
     }
 
     public function resolveToCommand(BaseCommand $command, TaskResolverInterface $resolvedBy): void

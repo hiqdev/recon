@@ -2,7 +2,6 @@
 
 namespace hiqdev\recon\core\Service;
 
-use hiapi\exceptions\NotProcessableException;
 use hiqdev\recon\core\Command\IncomingTask;
 use hiqdev\recon\core\Event\FailedTaskEvent;
 use hiqdev\recon\core\Event\TaskEvent;
@@ -14,7 +13,6 @@ use hiqdev\recon\core\Model\SimpleCommandHandlingResult;
 use hiqdev\yii2\autobus\components\CommandBusInterface;
 use League\Event\EmitterInterface;
 use Psr\Log\LoggerInterface;
-use RuntimeException;
 use Throwable;
 
 final class TaskLifecycle
@@ -128,8 +126,6 @@ final class TaskLifecycle
             $this->emitter->emit(
                 FailedTaskEvent::create(self::EVENT_TASK_FAILED, $task)->setException($e)
             );
-        } catch (NotProcessableException $exception) {
-            throw $exception;
         } catch (Throwable $e) {
             $this->log->critical('An unknown error occurred', [
                 'task_id' => $task->id,
