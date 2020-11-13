@@ -14,7 +14,6 @@ use hiqdev\recon\core\Model\SimpleCommandHandlingResult;
 use hiqdev\yii2\autobus\components\CommandBusInterface;
 use League\Event\EmitterInterface;
 use Psr\Log\LoggerInterface;
-use RuntimeException;
 use Throwable;
 
 final class TaskLifecycle
@@ -30,18 +29,9 @@ final class TaskLifecycle
     public const EVENT_TASK_FAILED    = __CLASS__ . '::EVENT_TASK_FAILED';
     public const EVENT_TASK_DEFERRED  = __CLASS__ . '::EVENT_TASK_DEFERRED';
 
-    /**
-     * @var EmitterInterface
-     */
-    private $emitter;
-    /**
-     * @var LoggerInterface
-     */
-    private $log;
-    /**
-     * @var CommandBusInterface
-     */
-    private $bus;
+    private EmitterInterface $emitter;
+    private LoggerInterface $log;
+    private CommandBusInterface $bus;
 
     public function __construct(EmitterInterface $emitter, CommandBusInterface $bus, LoggerInterface $logger)
     {
@@ -99,14 +89,14 @@ final class TaskLifecycle
             $this->emitter->emit(TaskEvent::create(self::EVENT_TASK_ACQUIRED, $task));
             $this->handleTask($task);
         } catch (SkipTaskException $e) {
-            $this->log->debug('Task was skipped', [
+            $this->log->debug('Task was skipped: ' . $e->getMessage(), [
                 'task_id' => $task->id,
                 'task_name' => $task->name,
                 'reason' => $e->getMessage()
             ]);
             return;
         } catch (DeferTaskException $e) {
-            $this->log->debug('Task was deferred', [
+            $this->log->debug('Task was deferred: ' . $e->getMessage(), [
                 'task_id' => $task->id,
                 'task_name' => $task->name,
                 'reason' => $e->getMessage()
@@ -117,7 +107,7 @@ final class TaskLifecycle
                 FailedTaskEvent::create(self::EVENT_TASK_DEFERRED, $task)->setException($e)
             );
         } catch (ReconException $e) {
-            $this->log->error('An error occurred', [
+            $this->log->error($e->getMessage(), [
                 'task_id' => $task->id,
                 'task_name' => $task->name,
                 'reason' => $e->getMessage(),
@@ -131,10 +121,9 @@ final class TaskLifecycle
         } catch (NotProcessableException $exception) {
             throw $exception;
         } catch (Throwable $e) {
-            $this->log->critical('An unknown error occurred', [
+            $this->log->critical('Unexpected error: ' . $e->getMessage(), [
                 'task_id' => $task->id,
                 'task_name' => $task->name,
-                'reason' => $e->getMessage(),
                 'stacktrace' => $e->getTraceAsString()
             ]);
 
@@ -145,7 +134,7 @@ final class TaskLifecycle
         }
     }
 
-    private function buildHandlingResultOutOfException(IncomingTask $task, \Throwable $e): CommandHandlingResultInterface
+    private function buildHandlingResultOutOfException(IncomingTask $task, Throwable $e): CommandHandlingResultInterface
     {
         $result = new SimpleCommandHandlingResult($task->getCommand());
         $result->isSuccess = false;

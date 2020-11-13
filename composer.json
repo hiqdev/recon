@@ -2,7 +2,7 @@
     "name": "hiqdev/recon",
     "type": "library",
     "require": {
-        "php": ">=7.2.0",
+        "php": ">=7.4",
 
         "hiqdev/hiapi": "dev-master"
     },
