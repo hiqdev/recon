@@ -4,7 +4,8 @@
     "require": {
         "php": ">=7.4",
 
-        "hiqdev/hiapi": "dev-master"
+        "hiqdev/hiapi": "dev-master",
+        "notamedia/yii2-sentry": "^1.5.1"
     },
     "require-dev": {
         "hiqdev/hidev-php": "dev-master",

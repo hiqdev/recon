@@ -5,4 +5,6 @@ return [
     'amqp.port'     => 5672,
     'amqp.user'     => 'guest',
     'amqp.password' => 'guest',
+
+    'sentry.dsn' => null,
 ];

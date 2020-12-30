@@ -1,10 +1,23 @@
 <?php
 
+use hiqdev\yii\compat\Buildtime;
 use hiqdev\yii\compat\yii;
 
 $params = $params ?? [];
 
 $app = [
+    'components' => [
+        (Buildtime::run(yii::is3()) ? 'logger' : 'log') => [
+            'targets' => array_filter([
+                $params['sentry.dsn'] !== null ? [
+                    '__class' => \notamedia\sentry\SentryTarget::class,
+                    'dsn' => $params['sentry.dsn'],
+                    'exportInterval' => 1,
+                    'levels' => ['error', 'warning'],
+                ] : null,
+            ]),
+        ],
+    ],
     'controllerMap' => [
         'queue' => [
             '__class' => \hiqdev\recon\core\Console\QueueController::class,
